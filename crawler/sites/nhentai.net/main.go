@@ -10,7 +10,7 @@ import (
 var siteName = "nhentai"
 var siteURL = "https://nhentai.net"
 
-// Run 单任务版爬虫
+// Run 单任务版爬虫.
 func Run(mangaIDs ...string) {
 	for _, mangaID := range mangaIDs {
 		var pageURL = siteURL + "/g/" + mangaID
