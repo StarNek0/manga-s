@@ -16,15 +16,15 @@ func PagesParser(resp []byte) ([]string, string) {
 	if len(idRes) == 0 {
 		return pageUrlsList, pictureType
 	}
-	mangaId := string(idRes[1])
+	mangaID := string(idRes[1])
 	pictureType = string(idRes[2])
 
 	//只要提取页数即可 因为是有规律的 按顺序排下去的
 	pageRegex := regexp.MustCompile(`<a class="gallerythumb" href="(.+?)"`)
 	allPages := pageRegex.FindAllSubmatch(resp, -1)
 	for k := range allPages {
-		thisUrl := fmt.Sprintf("https://i.nhentai.net/galleries/%s/%d.%s", mangaId, k+1, pictureType)
-		pageUrlsList = append(pageUrlsList, thisUrl)
+		thisURL := fmt.Sprintf("https://i.nhentai.net/galleries/%s/%d.%s", mangaID, k+1, pictureType)
+		pageUrlsList = append(pageUrlsList, thisURL)
 	}
 	return pageUrlsList, pictureType
 }

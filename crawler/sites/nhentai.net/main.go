@@ -8,17 +8,17 @@ import (
 )
 
 var siteName = "nhentai"
-var siteUrl = "https://nhentai.net"
+var siteURL = "https://nhentai.net"
 
 // Run 单任务版爬虫
-func Run(mangaIds ...string) {
-	for _, mangaId := range mangaIds {
-		var pageUrl = siteUrl + "/g/" + mangaId
+func Run(mangaIDs ...string) {
+	for _, mangaID := range mangaIDs {
+		var pageURL = siteURL + "/g/" + mangaID
 
-		resp, _ := fetcher.Fetch(pageUrl, true)
-		pageUrlsList, pictureType := parser.PagesParser(resp)
+		resp, _ := fetcher.Fetch(pageURL, true)
+		pageURLsList, pictureType := parser.PagesParser(resp)
 
-		for k, v := range pageUrlsList {
+		for k, v := range pageURLsList {
 			fileName := fmt.Sprintf("%d.%s", k+1, pictureType)
 			filePath := path.Join(siteName, "258972", fileName)
 			err := fetcher.FetchToFile(v, filePath)
