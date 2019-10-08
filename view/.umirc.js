@@ -34,6 +34,11 @@ export default {
           component: 'index.js',
           title:"首页 - MangaS"
         },
+        {
+          path: '/detail',
+          component: 'detail.js',
+          title:"详情页 - MangaS"
+        },
       ]
     }
   ]

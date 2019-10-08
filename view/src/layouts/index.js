@@ -1,5 +1,5 @@
+import Link from 'umi/link';
 import {Avatar, Col, Icon, Input, Layout, Menu, Row} from "antd";
-
 const {Header, Content, Footer} = Layout;
 
 function BasicLayout(props) {
@@ -17,7 +17,9 @@ function BasicLayout(props) {
               defaultSelectedKeys={['1']}
               style={{lineHeight: '64px'}}
             >
-              <Menu.Item key="1">主页</Menu.Item>
+              <Link to="/">
+                <Menu.Item key="1">主页</Menu.Item>
+              </Link>
             </Menu>
           </Col>
           <Col span={6} align="right">
