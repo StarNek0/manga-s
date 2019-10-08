@@ -22,7 +22,7 @@ export default {
     }],
   ],
   theme: {
-    "primary-color": "#0a72a5",
+    // "primary-color": "#0a72a5",
   },
   routes: [
     {
