@@ -1,10 +1,18 @@
 import Link from 'umi/link';
 import {Avatar, Col, Icon, Input, Layout, Menu, Row} from "antd";
+// import styles from './index.css';
+// import mp4 from '@/demo.mp4'
+
 const {Header, Content, Footer} = Layout;
 
 function BasicLayout(props) {
   return (
     <Layout className="layout">
+      {/*<div className={styles.bg_video}>*/}
+      {/*  <video className={styles.v1} autoPlay muted loop>*/}
+      {/*    <source src={mp4}/>*/}
+      {/*  </video>*/}
+      {/*</div>*/}
       <Header style={{background: '#fff'}}>
         <Row>
           <Col span={2} align="left">
@@ -47,7 +55,9 @@ function BasicLayout(props) {
           {props.children}
         </div>
       </Content>
-      <Footer style={{textAlign: 'center'}}>©2019</Footer>
+      <Footer style={{textAlign: 'center'}}>
+        ©2019
+      </Footer>
 
     </Layout>
   );

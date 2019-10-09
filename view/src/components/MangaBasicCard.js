@@ -18,7 +18,7 @@ export default class MangaBasicCard extends Component {
         }
       >
         <Meta
-          title="Manga Name"
+          title="漫画名"
           description={
             <Row>
               <Col span={6}>分类</Col>
