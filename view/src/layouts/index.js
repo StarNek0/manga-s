@@ -13,48 +13,50 @@ function BasicLayout(props) {
       {/*    <source src={mp4}/>*/}
       {/*  </video>*/}
       {/*</div>*/}
-      <Header style={{background: '#fff'}}>
-        <Row>
-          <Col span={2} align="left">
-            logo
-          </Col>
-          <Col span={12} align="left">
-            <Menu
-              theme="light"
-              mode="horizontal"
-              defaultSelectedKeys={['1']}
-              style={{lineHeight: '64px'}}
-            >
-              <Link to="/">
-                <Menu.Item key="1">主页</Menu.Item>
-              </Link>
-            </Menu>
-          </Col>
-          <Col span={6} align="right">
-            <Input.Search
-              placeholder="搜索"
-              onSearch={value => console.log(value)}
-              style={{width: 200}}
-            /></Col>
-          <Col span={2} align="right">
-            <Avatar icon="user"/>
-            <Icon type="caret-down"/>
-          </Col>
-          <Col span={1} align="right">
-            <Icon type="bell"/>
-          </Col>
-          <Col span={1} align="right">
-            <Icon type="logout"/>
-          </Col>
-        </Row>
 
+      <div align="center">
+        <Header style={{background: '#fff'}}>
+          <Row style={{width: "79%", textAlign: "left"}}>
+            <Col span={2} align="left">
+              logo
+            </Col>
+            <Col span={12} align="left">
+              <Menu
+                theme="light"
+                mode="horizontal"
+                defaultSelectedKeys={['1']}
+                style={{lineHeight: '64px'}}
+              >
+                <Link to="/">
+                  <Menu.Item key="1">主页</Menu.Item>
+                </Link>
+              </Menu>
+            </Col>
+            <Col span={6} align="right">
+              <Input.Search
+                placeholder="搜索"
+                onSearch={value => console.log(value)}
+                style={{width: 200}}
+              /></Col>
+            <Col span={2} align="right">
+              <Avatar icon="user"/>
+              <Icon type="caret-down"/>
+            </Col>
+            <Col span={1} align="right">
+              <Icon type="bell"/>
+            </Col>
+            <Col span={1} align="right">
+              <Icon type="logout"/>
+            </Col>
+          </Row>
+        </Header>
+        <Content style={{margin: '16px 16px 0', width: "79%", textAlign: "left"}}>
+          <div style={{padding: 16, background: '#fff', minHeight: 360, borderRadius: 3}}>
+            {props.children}
+          </div>
+        </Content>
+      </div>
 
-      </Header>
-      <Content style={{margin: '24px 16px 0'}}>
-        <div style={{padding: 24, background: '#fff', minHeight: 360}}>
-          {props.children}
-        </div>
-      </Content>
       <Footer style={{textAlign: 'center'}}>
         ©2019
       </Footer>
