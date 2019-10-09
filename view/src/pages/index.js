@@ -7,23 +7,25 @@ import Link from 'umi/link';
 
 export default function () {
   return (
-    <div align="center">
-      <Card bordered={false}>
-        <Row type="flex" justify="start">
-          <Col xs={24} sm={12} lg={6} style={{paddingBottom: 15}} align="center"><Link
-            to={`/detail?id=${0}`}><MangaBasicCard/></Link></Col>
-          <Col xs={24} sm={12} lg={6} style={{paddingBottom: 15}} align="center"><Link
-            to={`/detail?id=${0}`}><MangaBasicCard/></Link></Col>
-          <Col xs={24} sm={12} lg={6} style={{paddingBottom: 15}} align="center"><Link
-            to={`/detail?id=${0}`}><MangaBasicCard/></Link></Col>
-          <Col xs={24} sm={12} lg={6} style={{paddingBottom: 15}} align="center"><Link
-            to={`/detail?id=${0}`}><MangaBasicCard/></Link></Col>
-          <Col xs={24} sm={12} lg={6} style={{paddingBottom: 15}} align="center"><Link
-            to={`/detail?id=${0}`}><MangaBasicCard/></Link></Col>
-          <Col xs={24} sm={12} lg={6} style={{paddingBottom: 15}} align="center"><Link
-            to={`/detail?id=${0}`}><MangaBasicCard/></Link></Col>
-        </Row>
-      </Card>
-    </div>
+    <Card bordered={false}>
+      <Row type="flex" justify="start">
+        <Col xs={24} sm={12} lg={8} style={{paddingBottom: 15}} align="center"><Link
+          to={`/detail?id=${0}`}><MangaBasicCard/></Link></Col>
+        <Col xs={24} sm={12} lg={8} style={{paddingBottom: 15}} align="center"><Link
+          to={`/detail?id=${0}`}><MangaBasicCard/></Link></Col>
+        <Col xs={24} sm={12} lg={8} style={{paddingBottom: 15}} align="center"><Link
+          to={`/detail?id=${0}`}><MangaBasicCard/></Link></Col>
+        <Col xs={24} sm={12} lg={8} style={{paddingBottom: 15}} align="center"><Link
+          to={`/detail?id=${0}`}><MangaBasicCard/></Link></Col>
+        <Col xs={24} sm={12} lg={8} style={{paddingBottom: 15}} align="center"><Link
+          to={`/detail?id=${0}`}><MangaBasicCard/></Link></Col>
+        <Col xs={24} sm={12} lg={8} style={{paddingBottom: 15}} align="center"><Link
+          to={`/detail?id=${0}`}><MangaBasicCard/></Link></Col>
+        <Col xs={24} sm={12} lg={8} style={{paddingBottom: 15}} align="center"><Link
+          to={`/detail?id=${0}`}><MangaBasicCard/></Link></Col>
+        <Col xs={24} sm={12} lg={8} style={{paddingBottom: 15}} align="center"><Link
+          to={`/detail?id=${0}`}><MangaBasicCard/></Link></Col>
+      </Row>
+    </Card>
   );
 }

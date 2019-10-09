@@ -15,12 +15,12 @@ function BasicLayout(props) {
       {/*</div>*/}
 
       <div align="center">
-        <Header style={{background: '#fff'}}>
+        <Header style={{background: '#fff', padding: 0}}>
           <Row style={{width: "79%", textAlign: "left"}}>
-            <Col span={2} align="left">
+            <Col span={3} align="left">
               logo
             </Col>
-            <Col span={12} align="left">
+            <Col xs={4} sm={7} lg={9} align="left">
               <Menu
                 theme="light"
                 mode="horizontal"
@@ -32,21 +32,23 @@ function BasicLayout(props) {
                 </Link>
               </Menu>
             </Col>
-            <Col span={6} align="right">
+            <Col xs={10} sm={9} lg={8} align="right">
               <Input.Search
                 placeholder="搜索"
                 onSearch={value => console.log(value)}
-                style={{width: 200}}
               /></Col>
-            <Col span={2} align="right">
-              <Avatar icon="user"/>
-              <Icon type="caret-down"/>
+
+            <Col span={1} align="left">
+              {/*<Icon type="logout"/>*/}
             </Col>
-            <Col span={1} align="right">
+            <Col span={1} align="left">
               <Icon type="bell"/>
             </Col>
-            <Col span={1} align="right">
-              <Icon type="logout"/>
+            <Col xs={4} sm={2} lg={1} align="right">
+              <Avatar icon="user"/>
+            </Col>
+            <Col span={1} align="left">
+              <Icon type="caret-down"/>
             </Col>
           </Row>
         </Header>

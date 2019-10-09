@@ -46,12 +46,12 @@ export default class Detail extends Component {
 
                   <Row>
                     <Col align="right">
-                      <Button type="danger" onClick={this.showModal}>开始阅读</Button>
-                      <span style={{paddingRight: 10}}/>
+                      <Button type="danger" icon="mobile" onClick={this.showModal}>阅读</Button>
+                      <span style={{paddingRight: 5}}/>
                       <Button type="primary" icon="download">下载</Button>
-                      <span style={{paddingRight: 10}}/>
+                      {/*<span style={{paddingRight: 10}}/>*/}
                       <Button type="link"><Icon type="star"/></Button>
-                      <Button type="link"><Icon type="star" theme="filled"/></Button>
+                      {/*<Button type="link"><Icon type="star" theme="filled"/></Button>*/}
                     </Col>
                   </Row>
                 </Col>
@@ -92,8 +92,13 @@ export default class Detail extends Component {
             onCancel={this.handleCancel}
             footer={
               <div align="left">
-                <Tabs defaultActiveKey="1" tabPosition="left">
+                <Tabs defaultActiveKey="1" tabPosition="top">
                   <Tabs.TabPane tab="第1话" key="1">
+                    <img
+                      width="100%"
+                      src="https://img10.360buyimg.com/n1/jfs/t1/24283/15/10369/413888/5c8606d0Ea7557eda/3ac144fe938eb391.jpg"
+                      alt="图片加载失败"
+                    />
                     <img
                       width="100%"
                       src="https://img10.360buyimg.com/n1/jfs/t1/24283/15/10369/413888/5c8606d0Ea7557eda/3ac144fe938eb391.jpg"
@@ -105,7 +110,7 @@ export default class Detail extends Component {
                 </Tabs>
               </div>
             }
-            width="85%"
+            width="95%"
           >
             漫画阅读
           </Modal>
