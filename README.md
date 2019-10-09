@@ -3,7 +3,7 @@
 
 ## 开发进度
 - 前端
-10%（首页+详情页的一部分）
+15% （布局+响应式+首页+详情页+阅读器的一部分 静态页面）[预览](http://nicopoi.com:8000/)
 
 - API
 2%（仅仅搭了个路由骨架，写了个demo）
@@ -12,7 +12,7 @@
 10%（写了某一个网站的单机版爬虫）
 
 - 原型
-[持续更新中...](https://free.modao.cc/app/t82fsps5qak0zbvvfqi6vgq3kqmr)
+[持续更新中](https://free.modao.cc/app/t82fsps5qak0zbvvfqi6vgq3kqmr)
 
 ## 技术栈（待定）
 - 前端
