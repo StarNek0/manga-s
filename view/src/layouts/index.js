@@ -1,5 +1,7 @@
 import Link from 'umi/link';
-import {Avatar, Col, Icon, Input, Layout, Menu, Row} from "antd";
+import {Col, Icon, Input, Layout, Menu, Row} from "antd";
+import UserAvatarMenu from "../components/UserAvatarMenu";
+import React from "react";
 // import styles from './index.css';
 // import mp4 from '@/demo.mp4'
 
@@ -27,28 +29,24 @@ function BasicLayout(props) {
                 defaultSelectedKeys={['1']}
                 style={{lineHeight: '64px'}}
               >
-                <Link to="/">
-                  <Menu.Item key="1">主页</Menu.Item>
-                </Link>
+                <Menu.Item key="1">
+                  <Link to="/">
+                    主页
+                  </Link>
+                </Menu.Item>
               </Menu>
             </Col>
             <Col xs={10} sm={9} lg={8} align="right">
               <Input.Search
                 placeholder="搜索"
                 onSearch={value => console.log(value)}
-              /></Col>
-
-            <Col span={1} align="left">
-              {/*<Icon type="logout"/>*/}
+              />
             </Col>
-            <Col span={1} align="left">
+            <Col span={3} align="right">
               <Icon type="bell"/>
             </Col>
             <Col xs={4} sm={2} lg={1} align="right">
-              <Avatar icon="user"/>
-            </Col>
-            <Col span={1} align="left">
-              <Icon type="caret-down"/>
+              <UserAvatarMenu/>
             </Col>
           </Row>
         </Header>

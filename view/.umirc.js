@@ -39,6 +39,11 @@ export default {
           component: 'detail.js',
           title:"详情页 - MangaS"
         },
+        {
+          path: '/admin',
+          component: 'admin.js',
+          title:"管理后台 - MangaS"
+        },
       ]
     }
   ]
