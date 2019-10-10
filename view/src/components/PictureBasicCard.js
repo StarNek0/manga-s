@@ -8,12 +8,11 @@ export default class PictureBasicCard extends Component {
     return (
       <Card
         hoverable
-        style={{width: 240}}
         bordered={false}
         cover={
           <img
             alt="图片加载失败"
-            src="https://img14.360buyimg.com/n1/jfs/t1/7119/16/15851/276237/5c762d55E773fc8bc/95ea80c28c035d15.png"
+            src="https://manhua.qpic.cn/manhua_detail/0/16_21_26_794d3a9f89e807498c728895b6da54ec_2336.jpg/800"
           />
         }
       >

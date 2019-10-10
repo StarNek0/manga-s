@@ -7,25 +7,23 @@ import Link from 'umi/link';
 
 export default function () {
   return (
-    <Card bordered={false}>
-      <Row type="flex" justify="start">
-        <Col xs={24} sm={12} lg={8} style={{paddingBottom: 15}} align="center"><Link
+      <Row type="flex" justify="start" gutter={16}>
+        <Col xs={24} sm={12} lg={8} style={{paddingBottom: 16}} align="center"><Link
           to={`/detail?id=${0}`}><MangaBasicCard/></Link></Col>
-        <Col xs={24} sm={12} lg={8} style={{paddingBottom: 15}} align="center"><Link
+        <Col xs={24} sm={12} lg={8} style={{paddingBottom: 16}} align="center"><Link
           to={`/detail?id=${0}`}><MangaBasicCard/></Link></Col>
-        <Col xs={24} sm={12} lg={8} style={{paddingBottom: 15}} align="center"><Link
+        <Col xs={24} sm={12} lg={8} style={{paddingBottom: 16}} align="center"><Link
           to={`/detail?id=${0}`}><MangaBasicCard/></Link></Col>
-        <Col xs={24} sm={12} lg={8} style={{paddingBottom: 15}} align="center"><Link
+        <Col xs={24} sm={12} lg={8} style={{paddingBottom: 16}} align="center"><Link
           to={`/detail?id=${0}`}><MangaBasicCard/></Link></Col>
-        <Col xs={24} sm={12} lg={8} style={{paddingBottom: 15}} align="center"><Link
+        <Col xs={24} sm={12} lg={8} style={{paddingBottom: 16}} align="center"><Link
           to={`/detail?id=${0}`}><MangaBasicCard/></Link></Col>
-        <Col xs={24} sm={12} lg={8} style={{paddingBottom: 15}} align="center"><Link
+        <Col xs={24} sm={12} lg={8} style={{paddingBottom: 16}} align="center"><Link
           to={`/detail?id=${0}`}><MangaBasicCard/></Link></Col>
-        <Col xs={24} sm={12} lg={8} style={{paddingBottom: 15}} align="center"><Link
+        <Col xs={24} sm={12} lg={8} style={{paddingBottom: 16}} align="center"><Link
           to={`/detail?id=${0}`}><MangaBasicCard/></Link></Col>
-        <Col xs={24} sm={12} lg={8} style={{paddingBottom: 15}} align="center"><Link
+        <Col xs={24} sm={12} lg={8} style={{paddingBottom: 16}} align="center"><Link
           to={`/detail?id=${0}`}><MangaBasicCard/></Link></Col>
       </Row>
-    </Card>
   );
 }
