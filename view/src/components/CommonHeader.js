@@ -37,7 +37,7 @@ export default class CommonHeader extends Component {
               // defaultSelectedKeys={['1']}
               onClick={this.handleClick}
               selectedKeys={[this.state.current]}
-              style={{lineHeight: '64px'}}
+              style={{lineHeight: '63px', border: 0}}
             >
               <Menu.Item key={routes.pathHash.indexPage}>
                 <Link to={routes.pathHash.indexPage}>
