@@ -5,10 +5,12 @@
 }
 
 .desc {
+  padding: 24px;
   flex: 1;
 }
 
 .buttons {
+  padding: 24px;
   display: flex;
   flex-direction: row-reverse;
 }

@@ -1,0 +1,8 @@
+{
+  "pathHash": {
+    "indexPage": "/",
+    "detailPage": "/detail",
+    "adminPage": "/admin"
+  }
+}
+

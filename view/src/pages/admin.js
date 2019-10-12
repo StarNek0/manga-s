@@ -1,7 +1,9 @@
-export default function () {
-  return (
-    <div>
-      <h1>Page admin</h1>
-    </div>
-  );
+import React, {Component} from "react";
+
+export default class Admin extends Component {
+  render() {
+    return (
+      <div>afsf</div>
+    )
+  }
 }
