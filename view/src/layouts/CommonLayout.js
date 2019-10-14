@@ -10,7 +10,7 @@ const {Content, Footer} = Layout;
 function CommonLayout(props) {
   let child = <div>{props.children}</div>;
   if (props.location.pathname === '/admin') {
-    child = <AdminLayout/>
+    child = <AdminLayout children={props.children}/>
   }
   return (
     <Layout className="layout">
