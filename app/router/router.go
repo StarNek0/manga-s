@@ -2,11 +2,11 @@ package router
 
 import (
 	"github.com/julienschmidt/httprouter"
-	"github.com/zsdostar/manga-s/api"
+	"github.com/zsdostar/manga-s/app"
 )
 
 var routes = Routes{
-	Route{"Get", "/", api.Index},
+	Route{"GET", "/", app.Index},
 }
 
 // Router for the web server.

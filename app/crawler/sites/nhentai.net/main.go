@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/zsdostar/manga-s/crawler/fetcher"
-	"github.com/zsdostar/manga-s/crawler/sites/nhentai.net/parser"
+	"github.com/zsdostar/manga-s/app/crawler/fetcher"
+	"github.com/zsdostar/manga-s/app/crawler/sites/nhentai.net/parser"
 	"path"
 )
 

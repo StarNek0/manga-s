@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/zsdostar/manga-s/api/router"
+	"github.com/zsdostar/manga-s/app/router"
 	"log"
 	"net/http"
 )
