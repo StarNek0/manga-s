@@ -1,5 +1,6 @@
 import React, {Component} from "react";
-import {Avatar, Button, Col, Icon, Input, List, Modal, Row, Select} from "antd";
+import {Button, Col, Icon, Input, List, Modal, Progress, Row, Select} from "antd";
+import MangaDescCard from "../components/MangaDescCard";
 
 const selectBefore = (
   <Select defaultValue="全部" style={{minWidth: 90}}>
@@ -8,15 +9,26 @@ const selectBefore = (
   </Select>
 );
 const listData = [];
-for (let i = 0; i < 23; i++) {
+for (let i = 0; i < 13; i++) {
   listData.push({
     href: 'http://ant.design',
-    title: `ant design part ${i}`,
+    title: `漫画 ${i}`,
     avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
     description:
-      'Ant Design, a design language for background applications, is refined by Ant UED Team.',
+      <div>
+        <li>作者：</li>
+        <li>标签：</li>
+        <li>人气：</li>
+        <li>评分：</li>
+        <li>章节数：</li>
+      </div>,
     content:
-      'We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
+      <div>
+        <p>描述</p>
+        <p>描述</p>
+        <p>描述</p>
+        <p>描述</p>
+      </div>,
   });
 }
 const IconText = ({type, text}) => (
@@ -48,10 +60,10 @@ export default class Admin extends Component {
   render() {
     return (
       <div>
-        <Button onClick={this.showModal}>添加</Button>
+        <Button onClick={this.showModal}>获取</Button>
         <Modal
           destroyOnClose={true}
-          title="添加新漫画"
+          title="获取新漫画"
           visible={this.state.visible}
           onOk={this.handleOk}
           onCancel={this.handleCancel}
@@ -61,7 +73,7 @@ export default class Admin extends Component {
           //   <MangaReader/>
           // }
           centered={true}
-          width="50%"
+          width="65%"
         >
           <Row type="flex" justify="center">
             <Col span={24}>
@@ -88,27 +100,25 @@ export default class Admin extends Component {
                   </div>
                 }
                 renderItem={item => (
-                  <List.Item
-                    key={item.title}
-                    actions={[
-                      <IconText type="star-o" text="156" key="list-vertical-star-o"/>,
-                      <IconText type="like-o" text="156" key="list-vertical-like-o"/>,
-                      <IconText type="message" text="2" key="list-vertical-message"/>,
-                    ]}
-                    extra={
-                      <img
-                        width={272}
-                        alt="logo"
-                        src="https://manhua.qpic.cn/vertical/0/14_17_07_371cb06b7af8862a858d18f376ddf51f_1536916069031.jpg/420"
-                      />
-                    }
-                  >
-                    <List.Item.Meta
-                      avatar={<Avatar src={item.avatar}/>}
-                      title={<a href={item.href}>{item.title}</a>}
-                      description={item.description}
-                    />
-                    {item.content}
+                  <List.Item>
+                    <MangaDescCard>
+                      <Row type="flex" justify="center">
+                        <Col span={24}>
+                          <Button>获取 default:<Icon type="plus-circle"/>success:<Icon type="check-circle"/>retry:<Icon
+                            type="reload"/></Button>
+                        </Col>
+                        <Col span={24}>
+                          <Progress
+                            strokeColor={{
+                              '0%': '#108ee9',
+                              '100%': '#87d068',
+                            }}
+                            percent={66.9}
+                          />
+                        </Col>
+                      </Row>
+
+                    </MangaDescCard>
                   </List.Item>
                 )}
               />

@@ -2,22 +2,19 @@ import {Card, Icon, Layout, Menu} from "antd";
 import React from "react";
 
 const {SubMenu} = Menu;
-const {Header, Content, Footer, Sider} = Layout;
-
-// import styles from './index.css';
-// import mp4 from '@/demo.mp4'
+const {Content, Sider} = Layout;
 
 
 function AdminLayout(props) {
   return (
     <div>
       <Layout>
-        <Sider width={200} style={{background: '#fff', borderRadius:20}}>
+        <Sider width={200} style={{background: '#fff', borderRadius: 20}}>
           <Menu
             mode="inline"
             defaultSelectedKeys={['1']}
             defaultOpenKeys={['sub1']}
-            style={{height: '100%', borderRadius:2}}
+            style={{height: '100%', borderRadius: 2}}
           >
             <SubMenu
               key="sub1"
@@ -64,7 +61,7 @@ function AdminLayout(props) {
           </Menu>
         </Sider>
         <Content style={{minHeight: 280}}>
-          <Card style={{height:"100%", border:0, marginLeft:10}}>
+          <Card style={{height: "100%", border: 0, marginLeft: 10}}>
             {props.children}
           </Card>
         </Content>
