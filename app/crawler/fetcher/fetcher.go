@@ -25,7 +25,7 @@ func Fetch(pageURL string, proxy bool) ([]byte, error) {
 // FetchRC 使用http包 获取ReadCloser类型.
 func FetchRC(pageURL string, manualProxy bool) (io.ReadCloser, error) {
 	client := &http.Client{}
-	// 是否使用代理
+	// 是否使用手动代理
 	if manualProxy {
 		urlproxy, _ := url.Parse(proxyURL)
 		client.Transport = &http.Transport{
