@@ -23,13 +23,17 @@ func Fetch(pageURL string, proxy bool) ([]byte, error) {
 }
 
 // FetchRC 使用http包 获取ReadCloser类型.
-func FetchRC(pageURL string, proxy bool) (io.ReadCloser, error) {
+func FetchRC(pageURL string, manualProxy bool) (io.ReadCloser, error) {
 	client := &http.Client{}
 	// 是否使用代理
-	if proxy {
+	if manualProxy {
 		urlproxy, _ := url.Parse(proxyURL)
 		client.Transport = &http.Transport{
 			Proxy: http.ProxyURL(urlproxy),
+		}
+	} else {
+		client.Transport = &http.Transport{
+			Proxy: http.ProxyFromEnvironment,
 		}
 	}
 
