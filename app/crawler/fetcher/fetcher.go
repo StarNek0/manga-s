@@ -5,16 +5,13 @@ import (
 	"io"
 	"io/ioutil"
 	"net/http"
-	"net/url"
 	"os"
 	"path"
 )
 
-var proxyURL = "http://localhost:1087"
-
 // Fetch 调用FetchRC获取[]byte类型的response.
-func Fetch(pageURL string, proxy bool) ([]byte, error) {
-	rc, err := FetchRC(pageURL, proxy)
+func Fetch(pageURL string) ([]byte, error) {
+	rc, err := FetchRC(pageURL)
 	if err != nil {
 		return nil, err
 	}
@@ -23,18 +20,10 @@ func Fetch(pageURL string, proxy bool) ([]byte, error) {
 }
 
 // FetchRC 使用http包 获取ReadCloser类型.
-func FetchRC(pageURL string, manualProxy bool) (io.ReadCloser, error) {
+func FetchRC(pageURL string) (io.ReadCloser, error) {
 	client := &http.Client{}
-	// 是否使用手动代理
-	if manualProxy {
-		urlproxy, _ := url.Parse(proxyURL)
-		client.Transport = &http.Transport{
-			Proxy: http.ProxyURL(urlproxy),
-		}
-	} else {
-		client.Transport = &http.Transport{
-			Proxy: http.ProxyFromEnvironment,
-		}
+	client.Transport = &http.Transport{
+		Proxy: http.ProxyFromEnvironment,
 	}
 
 	// 创建request, 发送请求, 并拦截错误.
@@ -57,7 +46,7 @@ func FetchRC(pageURL string, manualProxy bool) (io.ReadCloser, error) {
 
 // FetchToFile 调用FetchRC 将内容写入文件.
 func FetchToFile(fileURL, filePath string) error {
-	rc, err := FetchRC(fileURL, true)
+	rc, err := FetchRC(fileURL)
 	if err != nil {
 		return err
 	}

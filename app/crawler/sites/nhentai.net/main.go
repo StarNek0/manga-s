@@ -15,7 +15,7 @@ func Run(mangaIDs ...string) {
 	for _, mangaID := range mangaIDs {
 		var pageURL = siteURL + "/g/" + mangaID
 
-		resp, _ := fetcher.Fetch(pageURL, true)
+		resp, _ := fetcher.Fetch(pageURL)
 		pageURLsList, pictureType := parser.PagesParser(resp)
 
 		for k, v := range pageURLsList {
