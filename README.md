@@ -32,9 +32,18 @@
   - 分布式节点管理（还没想好
 
   通信
-  - 前端与Web服务：`http`或者 `json rpc` 吧
+  - 前端与Web服务：`http`或者 `json rpc` 
   - Web服务与爬虫：`RabbitMQ`
-  - Web服务和文件存储（`grpc`吧
+  - Web服务和文件存储：`grpc`
+
+  链路追踪
+  - `Jaeger`
+
+  日志
+  - `ELK`
+  
+  微服务
+  - 以后再说吧，一个人不好弄
 
   部署
   - `docker`、可能用`k8s`来编排
